@@ -28,7 +28,7 @@
 @media (max-width: 768px) {
 
   /* ── BODY — extra bottom space for bottom nav ── */
-  body { font-size: 14px; padding-bottom: 64px; }
+  body { font-size: 14px; padding-bottom: 80px; }
 
   /* ── TOPBAR ── */
   .topbar {
@@ -241,7 +241,7 @@
   .trust-sub   { font-size: 0.66rem; }
 
   /* ── FOOTER ── */
-  footer         { padding: 32px 16px 0; }
+  footer         { padding: 32px 16px 80px; }
   .footer-grid   { grid-template-columns: 1fr 1fr; gap: 24px; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
   .footer-pay    { justify-content: center; }
