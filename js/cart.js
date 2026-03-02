@@ -4,7 +4,7 @@
    LEATHR — Cart Management
    ================================================================ */
 
-    const FREE_SHIP_THRESHOLD = 16500;
+    const FREE_SHIP_THRESHOLD = 1500;
     const PROMO_CODES = { 'LEATHR10': 0.10, 'SAVE15': 0.15 };
     let cart = [];
     let promoApplied = null;

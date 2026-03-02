@@ -330,10 +330,10 @@
           { name: 'Rahul S.', stars: 4, date: 'Nov 2025', text: 'Great jacket! Took a few days to break in but now it fits like a glove.' },
         ],
         images: [
-          { url: 'https://media.istockphoto.com/id/1368420581/photo/handmade-leather-notebook-closeup.jpg?s=2048x2048&w=is&k=20&c=yH2SvJQB3Q1Ea6siPQV21hcWbY60xNG1Ocpcys85N44=', label: 'Front' },
-          { url: 'https://media.istockphoto.com/id/2145592985/photo/cover-folder-made-of-genuine-leather-for-a-notepad-of-papers-size-a5-on-a-dark-wooden.jpg?s=2048x2048&w=is&k=20&c=Bl6u6s1NCPVOl8kxpDCUQr55e3SDPIW0WMoOgsAsR5Q=', label: 'Back' },
-          { url: 'https://media.istockphoto.com/id/1138927066/photo/brown-and-black-handmade-leather-notebook-covers-with-notebook-and-pen-inside-on-wooden.jpg?s=2048x2048&w=is&k=20&c=RpQAFZvCfktP-h5bC9tD3E_PdyJ0fmau1GbQMRqibhc=', label: 'Left' },
-          { url: 'https://media.istockphoto.com/id/1646203828/photo/ring-bound-planner-and-pen-on-wooden-table.jpg?s=2048x2048&w=is&k=20&c=8L7etXB290GD_DaS9GYk5rFOG6XHL1WC1LDUqC0tsvc=', label: 'Detail' },
+          { url: 'https://m.media-amazon.com/images/I/81Qu5V4CswL._SY625_.jpg', label: 'Front' },
+          { url: 'https://m.media-amazon.com/images/I/81scUhl+n-L._SY625_.jpg', label: 'Back' },
+          { url: 'https://m.media-amazon.com/images/I/8116D7LQMVL._SY625_.jpg', label: 'Left' },
+          { url: 'https://m.media-amazon.com/images/I/81OGI+FUPgL._SY625_.jpg', label: 'Detail' },
         ],
       },
     };
