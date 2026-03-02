@@ -155,18 +155,60 @@
   /* ── PRODUCTS — Amazon-style 2-col grid ── */
   .section-head  { padding: 20px 12px 12px; flex-wrap: wrap; gap: 8px; }
   .products-wrap { padding: 0 8px 32px; }
-  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 
-  /* Tighten card for mobile */
-  .product-card  { border-radius: 10px; }
-  .card-body     { padding: 10px 10px 12px; }
-  .card-name     { font-size: 0.82rem; }
-  .card-type     { font-size: 0.64rem; margin-bottom: 8px; }
-  .card-price    { font-size: 0.95rem; }
-  .card-old-price{ font-size: 0.72rem; }
-  .add-btn       { padding: 8px 10px; font-size: 0.68rem; border-radius: 6px; }
-  .section-title { font-size: 1.4rem; }
-  .view-all      { font-size: 0.7rem; padding: 6px 12px; }
+  /* ── PRODUCT CARD: mobile-optimised ── */
+  .product-card   { border-radius: 10px; border-width: 1.5px; }
+
+  /* Hide the 4-tab strip — too cramped; dots + arrows still work */
+  .view-tabs      { display: none; }
+
+  /* Always show arrow nav (no hover on touch screens) */
+  .img-nav        { opacity: 1; width: 24px; height: 24px; font-size: 0.7rem; }
+  .img-nav.prev   { left: 6px; }
+  .img-nav.next   { right: 6px; }
+
+  /* Move dots up a bit now that tabs are gone */
+  .view-dots      { bottom: 8px; }
+
+  /* Hide angle label — tight space */
+  .view-angle-label { display: none; }
+
+  /* Card body — tight padding */
+  .card-body      { padding: 8px 8px 10px; }
+
+  /* Hide type row & color dots on small cards */
+  .card-type      { display: none; }
+  .card-colors    { margin-bottom: 6px; }
+  .color-dot      { width: 10px; height: 10px; }
+
+  /* Compact stars — hide review count */
+  .card-stars     { margin-bottom: 8px; }
+  .review-count   { display: none; }
+  .stars          { font-size: 0.72rem; }
+
+  /* Stack price + add button vertically (Amazon style) */
+  .card-bottom    { flex-direction: column; align-items: stretch; gap: 6px; margin-top: 6px; }
+  .card-price     { font-size: 1rem; }
+  .card-old-price { font-size: 0.7rem; }
+
+  /* Full-width add button — easy to tap */
+  .add-btn {
+    width: 100%;
+    text-align: center;
+    padding: 9px 8px;
+    font-size: 0.72rem;
+    border-radius: 7px;
+    white-space: normal;
+  }
+
+  .card-name      { font-size: 0.8rem; line-height: 1.25; margin-bottom: 3px; }
+  .section-title  { font-size: 1.4rem; }
+  .view-all       { font-size: 0.7rem; padding: 6px 12px; }
 
   /* ── PROMO BANNER ── */
   .promo-banner {
@@ -246,10 +288,12 @@
   .hero-badge      { padding: 8px 12px; }
   .hero-badge-big  { font-size: 1.4rem; }
 
-  /* Products */
-  .products-grid   { gap: 6px; }
+  /* Products — keep 2-col, just tighten gap */
+  .products-grid   { grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .products-wrap   { padding: 0 6px 28px; }
-  .card-name       { font-size: 0.78rem; }
+  .card-name       { font-size: 0.75rem; }
+  .card-price      { font-size: 0.92rem; }
+  .add-btn         { padding: 8px 6px; font-size: 0.68rem; }
   .section-title   { font-size: 1.2rem; }
 
   /* Trust — single col */
@@ -281,7 +325,11 @@
 ════════════════════════════════════════════════ */
 @media (max-width: 360px) {
   .nav-logo .logo-text { display: none; }
-  .products-grid { grid-template-columns: 1fr; }
+  /* Keep 2-col grid even on tiny screens */
+  .products-grid  { grid-template-columns: repeat(2, 1fr); gap: 4px; }
+  .products-wrap  { padding: 0 4px 24px; }
+  .card-name      { font-size: 0.7rem; }
+  .add-btn        { padding: 7px 4px; font-size: 0.64rem; }
   .hero-title { font-size: 1.6rem; }
 }
 
