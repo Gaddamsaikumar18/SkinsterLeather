@@ -130,10 +130,20 @@
       </div>
       <button class="admin-nav-btn" onclick="openAdmin()">🗄 Admin DB</button>
       <button class="cart-btn" id="cartToggleBtn" onclick="openCart()">
-        🛒 Cart <span class="cart-count" id="cartCount">0</span>
+        🛒 <span class="cart-label">Cart</span> <span class="cart-count" id="cartCount">0</span>
       </button>
     </div>
   </nav>
+
+  <!-- MOBILE SEARCH BAR (hidden on desktop) -->
+  <div class="mobile-search-bar" id="mobileSearchBar">
+    <input
+      type="search"
+      class="mobile-search-input"
+      placeholder="Search jackets, styles, colours…"
+      oninput="document.getElementById('searchInput').value=this.value; filterProducts()"
+    />
+  </div>
 
   <!-- CART OVERLAY -->
   <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
@@ -1087,6 +1097,29 @@
   </footer>
 
   <script src="js/db.js"></script>
+  <!-- MOBILE BOTTOM NAV (hidden on desktop) -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+    <a class="mob-nav-item" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">
+      <span class="mob-nav-icon">🏠</span>
+      <span class="mob-nav-label">Home</span>
+    </a>
+    <button class="mob-nav-item" onclick="document.querySelector('.mobile-search-input').focus(); window.scrollTo({top:0,behavior:'smooth'});">
+      <span class="mob-nav-icon">🔍</span>
+      <span class="mob-nav-label">Search</span>
+    </button>
+    <button class="mob-nav-item mob-cart-btn" onclick="openCart()">
+      <span class="mob-nav-icon mob-cart-wrap">
+        🛒
+        <span class="mob-cart-badge" id="mobCartBadge"></span>
+      </span>
+      <span class="mob-nav-label">Cart</span>
+    </button>
+    <a class="mob-nav-item" href="#">
+      <span class="mob-nav-icon">👤</span>
+      <span class="mob-nav-label">Account</span>
+    </a>
+  </nav>
+
   <script src="js/cart.js"></script>
   <script src="js/payment.js"></script>
   <script src="js/admin.js"></script>

@@ -94,6 +94,8 @@
 
       document.getElementById('cartCount').textContent   = totalItems;
       document.getElementById('drawerCount').textContent = totalItems;
+      const mobBadge = document.getElementById('mobCartBadge');
+      if (mobBadge) { mobBadge.textContent = totalItems || ''; mobBadge.style.display = totalItems > 0 ? 'flex' : 'none'; }
 
       const progress = Math.min(100, (subtotal/FREE_SHIP_THRESHOLD)*100);
       document.getElementById('shipFill').style.width = progress+'%';
