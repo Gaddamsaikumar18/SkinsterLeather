@@ -1,0 +1,96 @@
+/* ================================================================
+   LEATHR — Footer & Global Animations
+   ================================================================ */
+/* ── FOOTER ── */
+footer {
+  background: var(--black);
+  color: rgba(255,255,255,0.7);
+  padding: 56px 48px 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 16px;
+}
+.footer-logo span { color: var(--red); }
+.footer-desc { font-size: 0.85rem; line-height: 1.7; max-width: 260px; margin-bottom: 24px; }
+.footer-social { display: flex; gap: 10px; }
+.soc-btn {
+  background: rgba(255,255,255,0.08);
+  color: white;
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background 0.2s;
+}
+.soc-btn:hover { background: var(--red); }
+.footer-col h5 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.82rem;
+  color: white;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover { color: var(--amber); }
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 0;
+}
+.footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+.footer-pay { display: flex; gap: 8px; }
+.pay-badge {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.6);
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* ── FADE IN ── */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s, transform 0.5s; }
+.fade-in.show { opacity: 1; transform: none; }
+
+/* ── 360 BADGE ── */
+.view-360-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: var(--amber);
+  color: var(--black);
+  font-family: 'Syne', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 4px 8px;
+  border-radius: 6px;
+  z-index: 2;
+  pointer-events: none;
+  text-transform: uppercase;
+}

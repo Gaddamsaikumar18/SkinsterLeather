@@ -1,0 +1,130 @@
+/* ================================================================
+   LEATHR — Sections: Promo Banner, Featured Drops & Trust Strip
+   ================================================================ */
+/* ── PROMO BANNER ── */
+.promo-banner {
+  margin: 0 48px 60px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 40px 56px;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.promo-banner::before {
+  content: '';
+  position: absolute;
+  width: 300px; height: 300px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+  top: -100px; right: 200px;
+}
+.promo-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+.promo-title span { color: var(--amber); }
+.promo-sub { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; }
+.promo-btn {
+  background: var(--amber); color: var(--black);
+  border: none; border-radius: 10px;
+  padding: 15px 36px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem; font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.promo-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+
+/* ── FEATURED ROW ── */
+.featured-row {
+  padding: 0 48px 60px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 20px;
+}
+.featured-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 3/4;
+}
+.featured-card.large { aspect-ratio: 3/5; }
+.featured-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.featured-card:hover img { transform: scale(1.06); }
+.featured-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 28px;
+}
+.feat-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+.feat-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.feat-price {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 16px;
+}
+.feat-btn {
+  background: white; color: var(--black);
+  border: none; border-radius: 8px;
+  padding: 10px 24px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem; font-weight: 800;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.2s;
+}
+.feat-btn:hover { background: var(--red); color: white; }
+
+/* ── TRUST STRIP ── */
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  background: var(--white);
+}
+.trust-item {
+  padding: 28px 24px;
+  display: flex; align-items: center; gap: 16px;
+  border-right: 2px solid var(--black);
+}
+.trust-item:last-child { border-right: none; }
+.trust-icon {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.trust-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.88rem; margin-bottom: 3px; }
+.trust-sub { font-size: 0.72rem; color: var(--muted); }

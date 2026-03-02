@@ -1,0 +1,20 @@
+/* ================================================================
+   LEATHR — Base: CSS Variables & Global Reset
+   ================================================================ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --bg: #f8f5f0;
+  --white: #ffffff;
+  --black: #111111;
+  --red: #e63946;
+  --amber: #f4a261;
+  --teal: #2a9d8f;
+  --navy: #1d3557;
+  --brown: #8B4513;
+  --light: #f1ede7;
+  --border: #e8e2d9;
+  --txt: #333;
+  --muted: #888;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); font-family: 'Nunito', sans-serif; color: var(--txt); overflow-x: hidden; }
