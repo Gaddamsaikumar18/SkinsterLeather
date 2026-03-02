@@ -1,0 +1,12 @@
+@media (max-width:768px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
